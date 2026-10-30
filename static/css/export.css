@@ -1,1 +1,9 @@
-.export-note{padding:15px;margin:22px 0;border:1px solid var(--line);border-radius:10px;background:#141b30}.export-note strong{font-size:12px}.export-note p{margin:7px 0 0;font-size:11px;line-height:1.5;color:var(--muted)}.checkbox-field{display:flex;gap:9px;align-items:center;color:#cbd1e1;font-size:12px}.checkbox-field input{width:auto;margin:0}.export-note~.auth-form select{width:100%;border:1px solid var(--line);background:#11182b;border-radius:8px;padding:11px;color:#e5e9f4;margin-top:7px}.file-info{min-width:180px}.file-export{margin-left:auto}.file-status+.file-export{margin-left:12px}
+.export-note { padding: 15px; margin: 22px 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.export-note strong { font-size: 13px; }
+.export-note p { margin: 7px 0 0; font-size: 12px; line-height: 1.5; color: var(--muted); }
+.checkbox-field { display: flex; gap: 9px; align-items: center; color: var(--text-soft); font-size: 13px; }
+.checkbox-field input { width: auto; margin: 0; accent-color: var(--accent); }
+.export-note ~ .auth-form select { width: 100%; border: 1px solid var(--line); background: var(--field); border-radius: 10px; padding: 11px 12px; color: var(--text); margin-top: 7px; font: inherit; }
+.file-info { min-width: 180px; }
+.file-export { margin-left: auto; }
+.file-status + .file-export { margin-left: 12px; }
