@@ -1,0 +1,1 @@
+# hackaton_altyn_gang
