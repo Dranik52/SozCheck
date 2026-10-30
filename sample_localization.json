@@ -1,0 +1,40 @@
+{
+  "menu": {
+    "start_game": {
+      "en": "Start Game",
+      "kk": "Ойынды козгау",
+      "uz": "O‘yinni boshlash",
+      "context": "Primary menu button",
+      "max_length": 18,
+      "category": "button"
+    },
+    "settings": {
+      "en": "Settings",
+      "kk": "Баптаулар",
+      "uz": "Sozlamalar",
+      "context": "Main menu option",
+      "max_length": 14,
+      "category": "menu"
+    }
+  },
+  "dialogue": {
+    "welcome_player": {
+      "en": "Welcome, {player_name}!",
+      "kk": "Қош келдің, {player_name}!",
+      "uz": "Xush kelibsiz, {player_name}!",
+      "context": "Friendly greeting from the village guide",
+      "max_length": 42,
+      "speaker": "Village Guide"
+    }
+  },
+  "rewards": {
+    "coins_received": {
+      "en": "You received {coins} coins!",
+      "kk": "Сіз {coins} тиын алдыңыз!",
+      "uz": "Siz {coins} tanga oldingiz!",
+      "context": "Reward notification",
+      "max_length": 36,
+      "category": "reward"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "game": "Forest of Whispers",
+  "ui": {
+    "start_game": {
+      "en": "Start Game",
+      "kk": "Ойын бастау жасау",
+      "uz": "O'yin boshlash qilish",
+      "context": "Main menu button. Deliberately awkward translations for QA testing.",
+      "max_length": 18,
+      "category": "button"
+    },
+    "settings": {
+      "en": "Settings",
+      "kk": "Настройки",
+      "uz": "Настройки",
+      "context": "Menu option. Deliberately left in Russian instead of the target languages.",
+      "max_length": 14,
+      "category": "menu"
+    }
+  },
+  "dialogue": {
+    "welcome_player": {
+      "en": "Welcome, {player_name}!",
+      "kk": "Қош келдің!",
+      "uz": "Xush kelibsiz, {player_name}!",
+      "context": "Friendly greeting from a forest guide. Kazakh version intentionally omits a placeholder.",
+      "max_length": 42,
+      "speaker": "Forest Guide"
+    },
+    "danger_warning": {
+      "en": "Run! The forest is dangerous!",
+      "kk": "Жүгір! Орман қауіпті!",
+      "uz": "Yugur! O'rmon xavfli!",
+      "context": "Urgent warning during combat.",
+      "max_length": 45,
+      "speaker": "Forest Guide"
+    }
+  },
+  "items": {
+    "healing_potion": {
+      "en": "Healing Potion",
+      "kk": "Емдік сусын",
+      "uz": "Davolash ichimlik",
+      "context": "Inventory item. Uzbek phrase is intentionally unnatural.",
+      "max_length": 20,
+      "rarity": "common"
+    }
+  }
+}
