@@ -1,0 +1,1 @@
+"""SözCheck Django project configuration."""

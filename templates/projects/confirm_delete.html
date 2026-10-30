@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Delete {{ project.name }} — SözCheck{% endblock %}
+{% block content %}<section class="auth-wrap"><div class="eyebrow">DELETE PROJECT</div><h1>Delete {{ project.name }}?</h1><p>This permanently removes the project and its related localization data. This action cannot be undone.</p><form method="post" class="auth-form">{% csrf_token %}<div class="form-actions"><button class="button danger" type="submit">Delete project</button><a class="text-link" href="{% url 'project_detail' project.pk %}">Cancel</a></div></form></section>{% endblock %}

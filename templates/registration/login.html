@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Log in — SözCheck{% endblock %}
+{% block content %}<section class="auth-wrap"><div class="eyebrow">WELCOME BACK</div><h1>Log in</h1><p>Continue to your localization workspace.</p><form method="post" class="auth-form">{% csrf_token %}{{ form.as_p }}<button class="button button-wide" type="submit">Log in <span>→</span></button></form><p class="auth-foot">New to SözCheck? <a href="{% url 'signup' %}">Create an account</a></p></section>{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Upload translations — SözCheck{% endblock %}
+{% block content %}
+<section class="auth-wrap upload-wrap">
+  <div class="eyebrow">{{ project.name|upper }}</div>
+  <h1>Upload translations</h1>
+  <p>Upload a UTF-8 CSV or JSON source. The original is kept unchanged.</p>
+  {% if parse_report %}
+  <div class="report-card {% if result_file.upload_status == 'invalid' %}report-error{% else %}report-success{% endif %}">
+    <strong>{% if result_file.upload_status == 'invalid' %}File stored with validation errors{% else %}File parsed successfully{% endif %}</strong>
+    <span>{{ result_file.original_filename }}</span>
+    {% if parse_report.errors %}<ul>{% for error in parse_report.errors %}<li>{{ error }}</li>{% endfor %}</ul>{% else %}<p>{{ parse_report.valid_count }} localization strings imported.</p>{% endif %}
+  </div>
+  {% endif %}
+  <form method="post" enctype="multipart/form-data" class="auth-form upload-form">
+    {% csrf_token %}{{ form.file.label_tag }}{{ form.file }}
+    {% if form.file.help_text %}<small>{{ form.file.help_text }}</small>{% endif %}{{ form.file.errors }}
+    <details><summary>CSV column mapping</summary><p>Map the headers in your file. Optional columns provide context and UI length limits.</p>
+      <div class="mapping-grid">
+        <div>{{ form.key_column.label_tag }}{{ form.key_column }}</div><div>{{ form.english_column.label_tag }}{{ form.english_column }}</div>
+        <div>{{ form.kazakh_column.label_tag }}{{ form.kazakh_column }}</div><div>{{ form.uzbek_column.label_tag }}{{ form.uzbek_column }}</div>
+        <div>{{ form.context_column.label_tag }}{{ form.context_column }}</div><div>{{ form.max_length_column.label_tag }}{{ form.max_length_column }}</div>
+      </div>
+    </details>
+    <div class="form-actions"><button class="button" type="submit">Upload and validate <span>→</span></button><a class="text-link" href="{% url 'project_detail' project.pk %}">Cancel</a></div>
+  </form>
+  <div class="format-note"><strong>JSON format</strong><code>{ "start_game": { "en": "Start", "kk": "Бастау", "uz": "Boshlash", "context": "Primary menu", "max_length": 24 } }</code></div>
+</section>
+{% endblock %}

@@ -1,0 +1,12 @@
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+
+from .models import User
+
+
+@admin.register(User)
+class CustomUserAdmin(UserAdmin):
+    fieldsets = UserAdmin.fieldsets + (("SözCheck access", {"fields": ("role",)}),)
+    add_fieldsets = UserAdmin.add_fieldsets + (("SözCheck access", {"fields": ("role",)}),)
+
+# Register your models here.

@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Create account — SözCheck{% endblock %}
+{% block content %}<section class="auth-wrap"><div class="eyebrow">GET STARTED</div><h1>Create account</h1><p>Set up your SözCheck workspace.</p><form method="post" class="auth-form">{% csrf_token %}{{ form.as_p }}<button class="button button-wide" type="submit">Create account <span>→</span></button></form><p class="auth-foot">Already have an account? <a href="{% url 'login' %}">Log in</a></p></section>{% endblock %}
